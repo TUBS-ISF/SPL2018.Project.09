@@ -2,10 +2,26 @@
 <featureModel>
     <properties/>
     <struct>
-        <and abstract="true" mandatory="true" name="AlgorithmsLibrary">
-            <feature name="Zahlentheorie"/>
-            <feature name="Datenstrukturen"/>
-        </and>
+        <or abstract="true" mandatory="true" name="AlgorithmsLibrary">
+            <and abstract="true" name="number theory">
+                <feature name="NewFeature3"/>
+            </and>
+            <or abstract="true" name="datastructures">
+                <and abstract="true" name="Graph">
+                    <feature mandatory="true" name="Node"/>
+                    <feature mandatory="true" name="Edge"/>
+                    <feature name="Tree"/>
+                </and>
+                <feature name="SQRT Decomposition"/>
+            </or>
+            <alt abstract="true" name="String Matching">
+                <feature name="Z Boxes"/>
+                <feature name="KMP"/>
+                <feature name="Suffix Array"/>
+            </alt>
+            <feature abstract="true" name="Sorting"/>
+            <feature abstract="true" name="Geometry"/>
+        </or>
     </struct>
     <constraints/>
     <calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
