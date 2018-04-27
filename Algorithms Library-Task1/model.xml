@@ -3,6 +3,11 @@
     <properties/>
     <struct>
         <or abstract="true" mandatory="true" name="AlgorithmsLibrary">
+            <description>
+This Java library is useful
+ for solving  computational problems
+and reducing time complexity 
+</description>
             <and abstract="true" name="number theory">
                 <feature name="NewFeature3"/>
             </and>
@@ -17,9 +22,11 @@
                     <and abstract="true" name="Segment Tree">
                         <feature name="simple"/>
                         <feature name="lazy"/>
+                        <feature name="Persistent"/>
                     </and>
                     <feature name="Fenwick Tree"/>
                 </alt>
+                <feature name="Hash Table"/>
             </or>
             <alt abstract="true" name="String Matching">
                 <feature name="Z Boxes"/>
