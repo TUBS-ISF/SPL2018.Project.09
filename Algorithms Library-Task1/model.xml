@@ -12,9 +12,8 @@ and reducing time complexity
                 <description>
 This feature describes optimal algorithms
 in number theory
-
 </description>
-                <feature name="NewFeature3"/>
+                <feature name="Operation on big number"/>
             </and>
             <or abstract="true" name="datastructures">
                 <description>
@@ -26,18 +25,33 @@ for competitive problems.
 This feature describes Graph 
 datastructure
 and algorithms in Graph thery
-
 </description>
                     <feature mandatory="true" name="Node"/>
-                    <feature mandatory="true" name="Edge"/>
-                    <feature name="Algorithms"/>
+                    <and abstract="true" mandatory="true" name="Edge">
+                        <feature name="Directed"/>
+                        <feature name="Weighted"/>
+                    </and>
+                    <and abstract="true" name="Algorithms">
+                        <and abstract="true" name="Search">
+                            <feature name="DFS"/>
+                            <feature name="BFS"/>
+                        </and>
+                        <and abstract="true" name="Shortest path">
+                            <feature name="Dijikstra"/>
+                        </and>
+                        <alt abstract="true" name="MST">
+                            <feature name="PRIM"/>
+                            <feature name="KRUSkal"/>
+                        </alt>
+                    </and>
                 </and>
-                <alt abstract="true" name="Query and update">
+                <alt abstract="true" name="Query and update on array">
                     <description>
 This feature describes datastructures
 for update and query operation.
 </description>
                     <feature name="SQRT Decomposition"/>
+                    <feature name="RMQ"/>
                     <and abstract="true" name="Segment Tree">
                         <feature name="simple"/>
                         <feature name="lazy"/>
@@ -55,29 +69,30 @@ pattern searching in text(Time complexity O(n))
                 <feature name="Z Boxes"/>
                 <feature name="KMP"/>
                 <feature name="Suffix Array"/>
+                <feature name="Suffix Tree"/>
+                <feature name="Trie"/>
             </or>
             <alt abstract="true" name="Sorting">
                 <description>
 This feature describes sorting algorithms 
 in array(Time complexity O(n log n)O(n ln n) O(n))
 </description>
-                <and abstract="true" name="Mergesort">
+                <or abstract="true" name="Mergesort">
                     <description>
 This feature describes Mergesort for
 sorting of array
-
 </description>
                     <feature name="Not Parallel"/>
                     <feature name="Parallel"/>
-                </and>
-                <and abstract="true" name="Quicksort">
+                </or>
+                <or abstract="true" name="Quicksort">
                     <feature name="pivot"/>
                     <feature name="randomised"/>
-                </and>
-                <and abstract="true" name="Digital Sorting">
+                </or>
+                <alt abstract="true" name="Digital Sorting">
                     <feature name="Counting sort"/>
                     <feature name="Radix sort"/>
-                </and>
+                </alt>
             </alt>
             <feature abstract="true" name="Geometry"/>
         </or>
