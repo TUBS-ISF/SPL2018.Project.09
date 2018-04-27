@@ -10,16 +10,36 @@
                 <and abstract="true" name="Graph">
                     <feature mandatory="true" name="Node"/>
                     <feature mandatory="true" name="Edge"/>
-                    <feature name="Tree"/>
+                    <feature name="Algorithms"/>
                 </and>
-                <feature name="SQRT Decomposition"/>
+                <alt abstract="true" name="Query and update">
+                    <feature name="SQRT Decomposition"/>
+                    <and abstract="true" name="Segment Tree">
+                        <feature name="simple"/>
+                        <feature name="lazy"/>
+                    </and>
+                    <feature name="Fenwick Tree"/>
+                </alt>
             </or>
             <alt abstract="true" name="String Matching">
                 <feature name="Z Boxes"/>
                 <feature name="KMP"/>
                 <feature name="Suffix Array"/>
             </alt>
-            <feature abstract="true" name="Sorting"/>
+            <and abstract="true" name="Sorting">
+                <and abstract="true" name="Mergesort">
+                    <feature name="Not Parallel"/>
+                    <feature name="Parallel"/>
+                </and>
+                <and abstract="true" name="Quicksort">
+                    <feature name="pivot"/>
+                    <feature name="randomised"/>
+                </and>
+                <and abstract="true" name="Digital Sorting">
+                    <feature name="Counting sort"/>
+                    <feature name="Radix sort"/>
+                </and>
+            </and>
             <feature abstract="true" name="Geometry"/>
         </or>
     </struct>
