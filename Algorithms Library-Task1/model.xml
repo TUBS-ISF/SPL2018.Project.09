@@ -6,18 +6,37 @@
             <description>
 This Java library is useful
  for solving  computational problems
-and reducing time complexity 
+and reducing time complexity
 </description>
             <and abstract="true" name="number theory">
+                <description>
+This feature describes optimal algorithms
+in number theory
+
+</description>
                 <feature name="NewFeature3"/>
             </and>
             <or abstract="true" name="datastructures">
+                <description>
+This feature describes datastructures
+for competitive problems.
+</description>
                 <and abstract="true" name="Graph">
+                    <description>
+This feature describes Graph 
+datastructure
+and algorithms in Graph thery
+
+</description>
                     <feature mandatory="true" name="Node"/>
                     <feature mandatory="true" name="Edge"/>
                     <feature name="Algorithms"/>
                 </and>
                 <alt abstract="true" name="Query and update">
+                    <description>
+This feature describes datastructures
+for update and query operation.
+</description>
                     <feature name="SQRT Decomposition"/>
                     <and abstract="true" name="Segment Tree">
                         <feature name="simple"/>
@@ -28,13 +47,26 @@ and reducing time complexity
                 </alt>
                 <feature name="Hash Table"/>
             </or>
-            <alt abstract="true" name="String Matching">
+            <or abstract="true" name="String Matching">
+                <description>
+This feature describes algorithms for 
+pattern searching in text(Time complexity O(n))
+</description>
                 <feature name="Z Boxes"/>
                 <feature name="KMP"/>
                 <feature name="Suffix Array"/>
-            </alt>
-            <and abstract="true" name="Sorting">
+            </or>
+            <alt abstract="true" name="Sorting">
+                <description>
+This feature describes sorting algorithms 
+in array(Time complexity O(n log n)O(n ln n) O(n))
+</description>
                 <and abstract="true" name="Mergesort">
+                    <description>
+This feature describes Mergesort for
+sorting of array
+
+</description>
                     <feature name="Not Parallel"/>
                     <feature name="Parallel"/>
                 </and>
@@ -46,7 +78,7 @@ and reducing time complexity
                     <feature name="Counting sort"/>
                     <feature name="Radix sort"/>
                 </and>
-            </and>
+            </alt>
             <feature abstract="true" name="Geometry"/>
         </or>
     </struct>
