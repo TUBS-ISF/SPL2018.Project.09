@@ -13,7 +13,12 @@ and reducing time complexity
 This feature describes optimal algorithms
 in number theory
 </description>
-                <feature name="Operation on big number"/>
+                <feature name="Operation on big number">
+                    <description>
+Operations on BigInteger and BigDecimal
+ are very slow. Using of FFT and DFT
+</description>
+                </feature>
             </and>
             <or abstract="true" name="datastructures">
                 <description>
@@ -31,19 +36,33 @@ and algorithms in Graph thery
                         <feature name="Directed"/>
                         <feature name="Weighted"/>
                     </and>
-                    <and abstract="true" name="Algorithms">
-                        <and abstract="true" name="Search">
-                            <feature name="DFS"/>
-                            <feature name="BFS"/>
-                        </and>
-                        <and abstract="true" name="Shortest path">
+                    <or abstract="true" name="Algorithms">
+                        <or abstract="true" name="Search">
+                            <feature name="DFS">
+                                <description>
+Depth first search
+
+</description>
+                            </feature>
+                            <feature name="BFS">
+                                <description>
+Breadth-first search
+
+</description>
+                            </feature>
+                        </or>
+                        <or abstract="true" name="Shortest path">
                             <feature name="Dijikstra"/>
-                        </and>
+                            <feature name="Bellman–Ford"/>
+                            <feature name="Floyd–Warshall"/>
+                        </or>
                         <alt abstract="true" name="MST">
                             <feature name="PRIM"/>
                             <feature name="KRUSkal"/>
                         </alt>
-                    </and>
+                        <feature name=" max-flow min-cut"/>
+                        <feature name="topological sort"/>
+                    </or>
                 </and>
                 <alt abstract="true" name="Query and update on array">
                     <description>
@@ -51,28 +70,78 @@ This feature describes datastructures
 for update and query operation.
 </description>
                     <feature name="SQRT Decomposition"/>
-                    <feature name="RMQ"/>
-                    <and abstract="true" name="Segment Tree">
-                        <feature name="simple"/>
-                        <feature name="lazy"/>
-                        <feature name="Persistent"/>
+                    <and name="RMQ">
+                        <feature name="min"/>
+                        <feature name="max"/>
                     </and>
-                    <feature name="Fenwick Tree"/>
+                    <and abstract="true" name="Segment Tree">
+                        <description>
+range operation on array in O(log (n))
+</description>
+                        <feature name="simple">
+                            <description>
+single update and range query
+
+</description>
+                        </feature>
+                        <feature name="lazy">
+                            <description>
+also range update
+</description>
+                        </feature>
+                        <feature name="Persistent">
+                            <description>
+save all version of updated tree or array 
+minimize memory and time complexity of update and query
+</description>
+                        </feature>
+                    </and>
+                    <feature name="Fenwick Tree">
+                        <description>
+range operation on array in O(log (n))
+
+</description>
+                    </feature>
                 </alt>
-                <feature name="Hash Table"/>
+                <feature abstract="true" name="Hash Table">
+                    <description>
+All hash procedures
+</description>
+                </feature>
             </or>
             <or abstract="true" name="String Matching">
                 <description>
 This feature describes algorithms for 
 pattern searching in text(Time complexity O(n))
 </description>
-                <feature name="Z Boxes"/>
-                <feature name="KMP"/>
-                <feature name="Suffix Array"/>
-                <feature name="Suffix Tree"/>
-                <feature name="Trie"/>
+                <feature name="Z Boxes">
+                    <description>
+O(n) String matching
+</description>
+                </feature>
+                <feature name="KMP">
+                    <description>
+O(n) String matching
+</description>
+                </feature>
+                <feature name="Suffix Array">
+                    <description>
+O(Log n) String matching with preprocessing
+</description>
+                </feature>
+                <feature name="Suffix Tree">
+                    <description>
+O(Log n) String matching with preprocessing
+</description>
+                </feature>
+                <feature name="Trie">
+                    <description>
+Digital algorithm for String matching
+</description>
+                </feature>
+                <feature name="m. with Hashing"/>
             </or>
-            <alt abstract="true" name="Sorting">
+            <and abstract="true" name="Sorting">
                 <description>
 This feature describes sorting algorithms 
 in array(Time complexity O(n log n)O(n ln n) O(n))
@@ -86,14 +155,23 @@ sorting of array
                     <feature name="Parallel"/>
                 </or>
                 <or abstract="true" name="Quicksort">
+                    <description>
+This feature describes Mergesort for
+sorting of array
+</description>
                     <feature name="pivot"/>
                     <feature name="randomised"/>
                 </or>
                 <alt abstract="true" name="Digital Sorting">
+                    <description>
+This feature describes digital
+ Sorting algorithms
+  on array
+</description>
                     <feature name="Counting sort"/>
                     <feature name="Radix sort"/>
                 </alt>
-            </alt>
+            </and>
             <feature abstract="true" name="Geometry"/>
         </or>
     </struct>
