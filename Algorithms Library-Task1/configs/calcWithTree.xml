@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <feature automatic="selected" name="AlgorithmsLibrary"/>
+    <feature automatic="selected" name="number theory"/>
+    <feature manual="selected" name="Operation on big number"/>
+    <feature automatic="selected" name="datastructures"/>
+    <feature automatic="selected" manual="selected" name="Query and update on array"/>
+    <feature automatic="unselected" name="SQRT Decomposition"/>
+    <feature automatic="unselected" name="RMQ"/>
+    <feature automatic="unselected" name="min"/>
+    <feature automatic="unselected" name="max"/>
+    <feature automatic="selected" manual="selected" name="Segment Tree"/>
+    <feature manual="selected" name="simple"/>
+    <feature manual="selected" name="lazy"/>
+    <feature manual="selected" name="Persistent"/>
+    <feature automatic="unselected" name="Fenwick Tree"/>
+    <feature automatic="selected" name="String Matching"/>
+    <feature manual="selected" name="Suffix Tree"/>
+    <feature manual="selected" name="Trie"/>
+</configuration>
