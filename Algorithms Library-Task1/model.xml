@@ -242,7 +242,11 @@ This feature describes Mergesort for
 sorting of array
 </description>
                     <feature name="pivot"/>
-                    <feature name="randomised"/>
+                    <feature name="randomised">
+                        <description>
+O(n ln n) time complexity
+</description>
+                    </feature>
                 </or>
                 <alt abstract="true" name="Digital Sorting">
                     <description>
@@ -250,8 +254,16 @@ This feature describes digital
  Sorting algorithms
   on array
 </description>
-                    <feature name="Counting sort"/>
-                    <feature name="Radix sort"/>
+                    <feature name="Counting sort">
+                        <description>
+O(n) time Complexity
+</description>
+                    </feature>
+                    <feature name="Radix sort">
+                        <description>
+O(N * d) time comlexity
+</description>
+                    </feature>
                 </alt>
             </and>
             <and abstract="true" name="Geometry">
