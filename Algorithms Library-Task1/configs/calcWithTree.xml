@@ -4,6 +4,13 @@
     <feature automatic="selected" name="number theory"/>
     <feature manual="selected" name="Operation on big number"/>
     <feature automatic="selected" name="datastructures"/>
+    <feature automatic="selected" name="Graph"/>
+    <feature automatic="selected" name="Node"/>
+    <feature automatic="selected" name="Edge"/>
+    <feature automatic="selected" name="Algorithms"/>
+    <feature automatic="selected" name="Search"/>
+    <feature manual="selected" name="DFS"/>
+    <feature manual="selected" name="BFS"/>
     <feature automatic="selected" manual="selected" name="Query and update on array"/>
     <feature automatic="unselected" name="SQRT Decomposition"/>
     <feature automatic="unselected" name="RMQ"/>

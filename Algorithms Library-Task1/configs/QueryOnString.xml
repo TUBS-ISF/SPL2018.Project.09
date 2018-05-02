@@ -16,7 +16,5 @@
     <feature manual="selected" name="Z Boxes"/>
     <feature manual="selected" name="KMP"/>
     <feature manual="selected" name="Suffix Array"/>
-    <feature manual="selected" name="Suffix Tree"/>
-    <feature manual="selected" name="Trie"/>
     <feature manual="selected" name="m. with Hashing"/>
 </configuration>
