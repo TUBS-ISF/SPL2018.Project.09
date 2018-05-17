@@ -2,6 +2,9 @@ package numbertheory;
 
 public class BigInt {
 
+	//2013265921
+	//749463956
+	//137
 	public static final int LOG_MAX_LENGTH = 27;
     public static final int MOD = 2013265921;
     private static final int PRIMITIVE_ROOT = 137;
