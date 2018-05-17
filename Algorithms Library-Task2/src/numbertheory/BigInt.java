@@ -10,19 +10,17 @@ public class BigInt {
 	private int [] data;
 	
 	public BigInt(String s) {
-		// TODO Auto-generated constructor stub
-		String l = "";
-		data = new int[l.length()];
+		data = new int[s.length()];
+		for(int i = 0;i < s.length(); i++) {
+			data[i] = s.charAt(i) - '0';
+		}
 	}
 	public BigInt(int[] b) {
-		// TODO Auto-generated constructor stub
-		String l = "";
-		data = new int[l.length()];
+		data = new int[b.length];
+		System.arraycopy(b, 0, data, 0, b.length);
 	}
 	public BigInt() {
-		// TODO Auto-generated constructor stub
-		String l = "";
-		data = new int[l.length()];
+		
 	}
 	
 	public int[] getData() {
@@ -61,14 +59,15 @@ public class BigInt {
         }
         return tA;
     }
-	public int[] multiply(int[] b) {
+	public BigInt multiply(BigInt B) {
+		int[] b = B.getData();
         int minN = this.data.length - 1 + b.length;
         int logN = 0;
         while ((1 << logN) < minN) {
             logN++;
         }
         int[] tA = transform(this.data, logN, PRIMITIVE_ROOT);
-        int[] tB = transform(this.data, logN, PRIMITIVE_ROOT);
+        int[] tB = transform(b, logN, PRIMITIVE_ROOT);
         int[] tC = tA;
         for (int j = 0; j < tC.length; j++) {
             tC[j] = addMultiply(0, tA[j], tB[j]);
@@ -79,20 +78,20 @@ public class BigInt {
         for (int j = 0; j < c.length; j++) {
             c[j] = addMultiply(0, nInverse, nC[j]);
         }
-        return c;
+        return new BigInt(c);
     }
 	
 	public BigInt add(BigInt b) {
-		return new BigInt();
-	}
-	public BigInt mull(BigInt b) {
 		return new BigInt();
 	}
 	public BigInt substract(BigInt b) {
 		return new BigInt();
 	}
 	public void print() {
-		
+		for(int i = 0;i < data.length; i++) {
+			System.out.print(data[i] + " ");
+		}
+		System.out.println();
 	}
 
 }
