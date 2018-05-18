@@ -1,7 +1,6 @@
 package queryupdate;
 
 
-// To DO
 public abstract class SparseTable <TT>{
     public Object[][] M;
     public int[] log;

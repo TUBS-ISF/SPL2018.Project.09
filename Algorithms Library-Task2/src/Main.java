@@ -1,3 +1,4 @@
+import numbertheory.Matrix;
 import queryupdate.SegmentTree;
 import queryupdate.SparseTable;
 
@@ -42,6 +43,23 @@ public class Main {
 		};
 		// O(1) time
 		System.out.println(ST.get(2,5));
+		
+		Integer[][] mm = {{1, 2}, {3, 4}};
+		Matrix<Integer> M = new Matrix<Integer>(mm) {
+
+			@Override
+			public Integer ad(Object data2, Object data3) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public Integer mul(Object data2, Object data3) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+		};
+		
 		
 	}
 
