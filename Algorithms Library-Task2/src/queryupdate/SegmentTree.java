@@ -1,13 +1,14 @@
 package queryupdate;
 
-import java.lang.reflect.Array;
+
+import queryupdateI.SegmentTreeI;
 
 /**
  *
  * @author Toghrul
  */
 // Use Template
-public class SegmentTree <TT>{
+public abstract class SegmentTree <TT>{
 	public class Node {
 		TT d;
 
@@ -16,20 +17,17 @@ public class SegmentTree <TT>{
 		}
 	}
 
-	public TT merge(TT t1, TT t2) {
-		
-		return null;
-	}
+	public abstract TT merge(TT t1, TT t2);
 
 	public int height, maxsize, n;
 	public TT T[];
 
-	public SegmentTree(Class<TT> c,TT[] a) {
+	public SegmentTree(TT[] a) {
 		n = a.length;
 		height = (int) Math.ceil((Math.log(a.length) / Math.log(2)));
 		maxsize = (int) (2 * Math.pow(2, height) - 1);
-		@SuppressWarnings("unchecked")
-        TT[] ar = (TT[]) Array.newInstance(c, maxsize + 1);
+		
+        TT[] ar = (TT[]) new Object[maxsize + 1];
         this.T = ar;
 		init(1, a, 0, a.length - 1);
 	}
