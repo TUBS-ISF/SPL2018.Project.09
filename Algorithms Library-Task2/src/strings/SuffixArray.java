@@ -7,13 +7,14 @@ package strings;
 */
 import java.util.Arrays;
 
+import queryupdate.SegmentTree;
+import queryupdate.SparseTable;
+
 
 public class SuffixArray {
 	// Configuration class for suffix Tree
-	public class Conf {
-		public  boolean SparseTable = false;
-		public  boolean SegmentTree = false;
-	}
+	
+	public String algo = "";
     public int[][] suffixrank;
     public Tuple[] T;
     public int[] lcp;
@@ -35,7 +36,8 @@ public class SuffixArray {
         }
     }
 
-    public SuffixArray(String s) {
+    public SuffixArray(String s, String algo) {
+    	this.algo = algo;
         n = s.length();
         suffixrank = new int[30][n];
         T = new Tuple[n];
@@ -61,6 +63,7 @@ public class SuffixArray {
                 suffixrank[stp][T[i].orgigindex] = currRank;
             }
         }
+        computeLCP(s);
 
     }
 
@@ -84,16 +87,49 @@ public class SuffixArray {
     }
 
     public int getPreffix(int i, int j) {
-        SparsaTable t = new SparsaTable(n);
-        t.init(lcp);
-        int l = suffixrank[stp][i], r = suffixrank[stp][j];
+    	int l = suffixrank[stp][i], r = suffixrank[stp][j];
         if (l > r) {
             int tmp = l;
             l = r;
             r = tmp;
         }
         if(l == r) return n - i;
-        return t.get(l + 1, r);
+        System.out.println(12);
+    	Integer[] a = new Integer[lcp.length];
+    	
+    	for(int k = 0; k < a.length; k++) a[k] = lcp[k];
+    	
+    	if(this.algo.equals("SegmentTree")) {
+    		SegmentTree<Integer> T = new SegmentTree<Integer>(a, Integer.MIN_VALUE) {
+
+    			@Override
+    			public Object merge(Object t2, Object t3) {
+    				// TODO Auto-generated method stub
+    				Integer a = (Integer)t2;
+    				Integer b = (Integer)t3;
+    				return Math.max(a, b);
+    			}
+    			
+    			
+    		};
+    		
+    	}else if(this.algo.equals("SparseTable")) {
+            SparseTable<Integer> ST = new SparseTable<Integer>(a) {
+
+    			@Override
+    			public Integer merge(Object a, Object b) {
+    				// TODO Auto-generated method stub
+    				Integer x  = (Integer)a;
+    				Integer y  = (Integer)b;
+    				return Math.min(x, y);
+    			}
+            	
+    		};
+            
+            return ST.get(l + 1, r);
+    	}
+    	return 0;
+
     }
     public long disticsubstring() {
         long ans = this.n - this.T[0].orgigindex;

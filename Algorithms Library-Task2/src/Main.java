@@ -1,12 +1,23 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
 import numbertheory.Matrix;
 import queryupdate.SegmentTree;
 import queryupdate.SparseTable;
+import strings.SuffixArray;
 
 public class Main {
 	
 
+	private static Set<String> propertiesSet;
+	
 	public static void main(String[] args) {
-		
+		propertiesSet = new HashSet<String>();
+		for(int i = 0; i < args.length; i++) {
+			propertiesSet.add(args[i]);
+		}
 		Integer[] a = new Integer[10000];
 		for(int i = 0;i < a.length; i++) {
 			a[i] = (int)(Math.random() * 100);
@@ -44,21 +55,10 @@ public class Main {
 		// O(1) time
 		System.out.println(ST.get(2,5));
 		
-		Integer[][] mm = {{1, 2}, {3, 4}};
-		Matrix<Integer> M = new Matrix<Integer>(mm) {
-
-			@Override
-			public Integer ad(Object data2, Object data3) {
-				// TODO Auto-generated method stub
-				return null;
-			}
-
-			@Override
-			public Integer mul(Object data2, Object data3) {
-				// TODO Auto-generated method stub
-				return null;
-			}
-		};
+		String test = "akljsdbakljsdbklajsdkajsdnkljasndkssssssssskjndsjjsjdnajsdnasdkasdkjansdkjanskjdna";
+		// waele algorithmus durch parametr
+		SuffixArray SA = new SuffixArray(test, "SegmentTree");
+		System.out.println(SA.getPreffix(0, 1));
 		
 		
 	}
