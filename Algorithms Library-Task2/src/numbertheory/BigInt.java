@@ -1,5 +1,9 @@
 package numbertheory;
 
+/**
+*
+* @author Toghrul
+*/
 public class BigInt {
 
 	//2013265921

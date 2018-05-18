@@ -1,7 +1,10 @@
 package strings;
 
 
-
+/**
+*
+* @author Toghrul
+*/
 import java.util.Arrays;
 
 public class SuffixArray {

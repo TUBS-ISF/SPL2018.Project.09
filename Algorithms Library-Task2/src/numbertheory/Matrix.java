@@ -1,5 +1,9 @@
 package numbertheory;
 
+/**
+*
+* @author Toghrul
+*/
 public abstract class Matrix <TT>{
 
 	private Object[][] data;
