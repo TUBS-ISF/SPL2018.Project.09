@@ -56,9 +56,16 @@ public class Main {
 		System.out.println(ST.get(2,5));
 		
 		String test = "akljsdbakljsdbklajsdkajsdnkljasndkssssssssskjndsjjsjdnajsdnasdkasdkjansdkjanskjdna";
-		// waele algorithmus durch parametr
-		SuffixArray SA = new SuffixArray(test, "SegmentTree");
-		System.out.println(SA.getPreffix(0, 1));
+		// waehle algorithmus durch parametr
+		
+		if(propertiesSet.contains("SegmentTree")) {
+			SuffixArray SA = new SuffixArray(test, "SegmentTree"); // or SparseTable
+			System.out.println(SA.getPreffix(0, 7));
+		}else if(propertiesSet.contains("SegmentTree")) {
+			SuffixArray SA = new SuffixArray(test, "SparseTable"); // or SparseTable
+			System.out.println(SA.getPreffix(0, 7));
+		}
+		
 		
 		
 	}
