@@ -23,7 +23,7 @@ public class Main {
 			
 			
 		};
-		// O(long n) time
+		// O(long n) time.
 		T.update(0, 15);
 		System.out.println(T.get(0, 5));
 		
