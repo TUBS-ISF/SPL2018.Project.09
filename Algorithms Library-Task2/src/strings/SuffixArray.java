@@ -7,8 +7,13 @@ package strings;
 */
 import java.util.Arrays;
 
-public class SuffixArray {
 
+public class SuffixArray {
+	// Configuration class for suffix Tree
+	public class Conf {
+		public  boolean SparseTable = false;
+		public  boolean SegmentTree = false;
+	}
     public int[][] suffixrank;
     public Tuple[] T;
     public int[] lcp;
