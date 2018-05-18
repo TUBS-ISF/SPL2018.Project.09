@@ -43,6 +43,7 @@ public class BigInt {
             k = ((k >>> 8) & 0x00ff00ff) | ((k & 0x00ff00ff) << 8);
             tA[(k >>> 16) | (k << 16)] = a[j];
         }
+        // save primitive nth root
         int[] root = new int[LOG_MAX_LENGTH];
         root[root.length - 1] = primitiveRoot;
         for (int i = root.length - 1; i > 0; i--) {
