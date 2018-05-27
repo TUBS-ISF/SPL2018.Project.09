@@ -6,6 +6,7 @@ import java.util.Set;
 import numbertheory.Matrix;
 import queryupdate.SegmentTree;
 import queryupdate.SparseTable;
+import strings.KMP;
 import strings.SuffixArray;
 import strings.ZAlgorithm;
 
@@ -26,7 +27,14 @@ public class Main {
 		SA = new SuffixArray(testString, "SparseTable");
 		//#endif
 		
-		ZAlgorithm Z = new ZAlgorithm("salamsagolsalamasdasdsalamsalam", "salam");
+		//ZAlgorithm Z = new ZAlgorithm("salamsagolsalamasdasdsalamsalam", "salam");
+		
+		String txt = "salamsalamsalamsalam";
+		String pat = "salam";
+		ArrayList<Integer> L = KMP.KMPSearch(pat, txt);
+		for(int x : L) { 
+			System.out.println(x);
+		}
 		
 	}
 
