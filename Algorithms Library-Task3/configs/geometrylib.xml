@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <feature automatic="selected" name="AlgorithmsLibrary"/>
+    <feature automatic="selected" manual="selected" name="Geometry"/>
+    <feature manual="selected" name="Point"/>
+    <feature automatic="selected" manual="selected" name="Line"/>
+    <feature manual="selected" name="intersect"/>
+    <feature manual="selected" name="Distance"/>
+    <feature manual="selected" name="Circle"/>
+    <feature manual="selected" name="Vector"/>
+    <feature automatic="selected" name="Matrix"/>
+    <feature manual="selected" name="Multiplication"/>
+    <feature manual="selected" name="Addition"/>
+</configuration>
