@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class ZAlgorithm {
 
 
-	public static ArrayList<Integer> search(String text, String pattern) {
+	public static ArrayList<Integer> search(String pattern, String text) {
 		String s = text + "$" + pattern;
 		int[] z = new int[s.length()];
 		int L = 0, R = 0;

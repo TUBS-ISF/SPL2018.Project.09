@@ -1,3 +1,4 @@
+import java.math.MathContext;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -7,6 +8,7 @@ import numbertheory.Matrix;
 import queryupdate.SegmentTree;
 import queryupdate.SparseTable;
 import strings.KMP;
+import strings.Matcher;
 import strings.SuffixArray;
 import strings.ZAlgorithm;
 
@@ -28,15 +30,9 @@ public class Main {
 		String txt = "salamsalamsalamsalam";
 		String pat = "salam";
 		ArrayList<Integer> L;
-		// #define KMP
-		// #ifdef KMP
-		L = KMP.search(pat, txt);
-		// #endif
-
-		// #ifdef ZF
-//@		L = ZAlgorithm.search(pat, txt);
-		// #endif
-
+		// Matcher is abhaengig von prepocessor
+		//#define KMP
+		L = Matcher.search(pat, txt);
 		for (int x : L) {
 			System.out.println(x);
 		}
