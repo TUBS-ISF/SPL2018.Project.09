@@ -28,7 +28,6 @@ public class Main {
 		
 		ZAlgorithm Z = new ZAlgorithm("salamsagolsalamasdasdsalamsalam", "salam");
 		
-		
 	}
 
 }
