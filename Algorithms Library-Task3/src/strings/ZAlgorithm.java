@@ -1,12 +1,13 @@
 package strings;
 
+import java.util.ArrayList;
+
 public class ZAlgorithm {
 
-	int z[];
 
-	public ZAlgorithm(String text, String pattern) {
+	public static ArrayList<Integer> search(String text, String pattern) {
 		String s = text + "$" + pattern;
-		z = new int[s.length()];
+		int[] z = new int[s.length()];
 		int L = 0, R = 0;
 		for (int i = 0; i < s.length(); i++) {
 			if (i > R) {
@@ -28,13 +29,14 @@ public class ZAlgorithm {
 				}
 			}
 		}
-		System.out.println(z.length);
+		ArrayList<Integer> ans = new ArrayList<Integer>();
 		for(int i = 0; i < z.length; i++) {
 			if(z[i] == pattern.length()) {
-				System.out.println("Pattern founded at index" + (i - pattern.length()-1));
+				//System.out.println("Pattern founded at index" + (i - pattern.length()-1));
+				ans.add(i-pattern.length()-1);
 			}
-			System.out.println(z[i] + " " + pattern.length());
 		}
+		return ans;
 	}
 
 }

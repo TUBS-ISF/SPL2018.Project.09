@@ -11,31 +11,36 @@ import strings.SuffixArray;
 import strings.ZAlgorithm;
 
 public class Main {
-	
 
-	
 	public static void main(String[] args) {
 		String testString = "asdasaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssddddddddddddssssssaabbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaagggggggggggggggggggggggggggaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxaaaaaaaaaaaaaaaaqqqqqqqqqqqqqqqeeeeee";
-		
+
 		SuffixArray SA;
-		//#define SegmentTree
-		//#ifdef SegmentTree
+		// #define SegmentTree
+		// #ifdef SegmentTree
 		SA = new SuffixArray(testString, "SegmenTree");
-		//#endif
-		
-		//#ifdef SegmentTree
-		SA = new SuffixArray(testString, "SparseTable");
-		//#endif
-		
-		//ZAlgorithm Z = new ZAlgorithm("salamsagolsalamasdasdsalamsalam", "salam");
-		
+		// #endif
+
+		// #ifdef SparseTable
+		// @ SA = new SuffixArray(testString, "SparseTable");
+		// #endif
+
 		String txt = "salamsalamsalamsalam";
 		String pat = "salam";
-		ArrayList<Integer> L = KMP.KMPSearch(pat, txt);
-		for(int x : L) { 
+		ArrayList<Integer> L;
+		// #define KMP
+		// #ifdef KMP
+		L = KMP.search(pat, txt);
+		// #endif
+
+		// #ifdef ZF
+//@		L = ZAlgorithm.search(pat, txt);
+		// #endif
+
+		for (int x : L) {
 			System.out.println(x);
 		}
-		
+
 	}
 
 }

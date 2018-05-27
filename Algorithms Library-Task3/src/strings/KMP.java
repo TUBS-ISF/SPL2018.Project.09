@@ -3,7 +3,7 @@ package strings;
 import java.util.ArrayList;
 
 public class KMP {
-	public static ArrayList<Integer> KMPSearch(String pat, String txt) {
+	public static ArrayList<Integer> search(String pat, String txt) {
 		ArrayList<Integer> ans = new ArrayList<Integer>();
 		int M = pat.length();
 		int N = txt.length();
