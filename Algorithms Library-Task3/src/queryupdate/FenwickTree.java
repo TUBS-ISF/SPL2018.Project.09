@@ -5,7 +5,7 @@ import java.lang.reflect.Array;
 public abstract class FenwickTree <T>{
 
 	T[] a;
-	T NEUTRAL;
+	T NEUTRAL; // in decimal 0
 	public FenwickTree(Class<T> c, int n) {
 		@SuppressWarnings("unchecked")
         final T[] a = (T[]) Array.newInstance(c, n);
@@ -23,7 +23,7 @@ public abstract class FenwickTree <T>{
 	public void update(int ind, T value) {
         assert ind > 0;
         while (ind < a.length) {
-            a[ind] =add(a[ind], value);
+            a[ind] = add(a[ind], value);
             //Extracting the portion up to the first significant one of the binary representation of 'ind' and incrementing ind by that number
             ind += ind & (-ind);
         }
