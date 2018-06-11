@@ -23,7 +23,6 @@ public class Main {
 		FenwickTree<Integer> T = new FenwickTree<Integer>(Integer.class, 100) {
 			@Override
 			public Integer add(Integer a, Integer b) {
-				// TODO Auto-generated method stub
 				return a  + b;
 			}
 		};

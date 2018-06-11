@@ -6,10 +6,11 @@ public abstract class FenwickTree <T>{
 
 	T[] a;
 	T NEUTRAL; // in decimal 0
-	public FenwickTree(Class<T> c, int n) {
+	public FenwickTree(Class<T> c, int n, T NEUTRAL) {
 		@SuppressWarnings("unchecked")
         final T[] a = (T[]) Array.newInstance(c, n);
         this.a = a;
+        this.NEUTRAL = NEUTRAL;
 	}
 	public abstract T add(T a, T b);
 	public T rsq(int ind) {
