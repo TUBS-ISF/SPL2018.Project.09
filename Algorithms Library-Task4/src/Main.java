@@ -5,15 +5,15 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-import numbertheory.BigInt;
-import numbertheory.Matrix;
-import queryupdate.FenwickTree;
-import queryupdate.SegmentTree;
-import queryupdate.SparseTable;
-import strings.KMP;
-import strings.Matcher;
-import strings.SuffixArray;
-import strings.ZAlgorithm;
+import interfaces.IBigInt;
+import interfaces.IMatrix;
+import interfaces.IFenwickTree;
+import interfaces.ISegmentTree;
+import interfaces.ISparseTable;
+import interfaces.IKMP;
+import interfaces.IMatcher;
+import interfaces.ISuffixArray;
+import interfaces.ZAlgorithm;
 
 public class Main {
 
