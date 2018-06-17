@@ -17,6 +17,6 @@
 	<classpathentry kind="lib" path="/usr/lib/jvm/java-8-oracle/jre/lib/ext/cldrdata.jar"/>
 	<classpathentry kind="lib" path="/usr/lib/jvm/java-8-oracle/jre/lib/ext/dnsns.jar"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="/Algorithms Library-Task4"/>
+	<classpathentry kind="src" path="/Task4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

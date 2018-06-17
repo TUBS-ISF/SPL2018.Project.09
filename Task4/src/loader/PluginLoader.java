@@ -63,10 +63,12 @@ public class PluginLoader {
 					Node interfaceNode = nlInterfaces.item(i);
 					if (interfaceNode.getNodeType() == Node.ELEMENT_NODE) {
 						String interfaceName = ((Element) interfaceNode).getAttribute("id");
+						System.out.println(interfaceName);
 						/** Get all implementing classes **/
 						NodeList nlClasses = interfaceNode.getChildNodes();
 						List<String> listClasses = new ArrayList<>();
 						for (int j = 0; j < nlClasses.getLength(); j++) {
+							
 							Node classNode = nlClasses.item(j);
 							if (classNode.getNodeType() == Node.ELEMENT_NODE) {
 								Element e = (Element) classNode;
@@ -98,11 +100,13 @@ public class PluginLoader {
 		/** Get information about all classes **/
 		Map<String, List<String>> classes = registerClasses();
 		for (String key : classes.keySet()) {
+			//System.out.println(key);
 			List<Object> classInstanceList = new ArrayList<>();
 			ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
 			for (String clWithInterface : classes.get(key)) {
 				try {
 					Class<?> loadClass = systemClassLoader.loadClass(clWithInterface);
+					
 					classInstanceList.add(loadClass.newInstance());
 				} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 					e.printStackTrace();

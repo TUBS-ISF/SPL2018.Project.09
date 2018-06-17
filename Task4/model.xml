@@ -2,7 +2,7 @@
 <featureModel>
     <properties/>
     <struct>
-        <and abstract="true" mandatory="true" name="AlgorithmsLibraryTask4">
+        <and abstract="true" mandatory="true" name="Task4">
             <feature name="SegmentTree"/>
         </and>
     </struct>
