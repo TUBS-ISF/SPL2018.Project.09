@@ -4,6 +4,7 @@
     <struct>
         <and abstract="true" mandatory="true" name="Task4">
             <feature name="SegmentTree"/>
+            <feature name="FenwickTree"/>
         </and>
     </struct>
     <constraints/>

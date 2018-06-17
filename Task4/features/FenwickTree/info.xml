@@ -1,0 +1,5 @@
+<plugin>
+	<interface id="interfaces.IFenwick">
+		<class>SegmentTree</class>
+	</interface>
+</plugin>

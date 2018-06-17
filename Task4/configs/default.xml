@@ -2,4 +2,5 @@
 <configuration>
     <feature automatic="selected" name="Task4"/>
     <feature manual="selected" name="SegmentTree"/>
+    <feature manual="selected" name="FenwickTree"/>
 </configuration>
