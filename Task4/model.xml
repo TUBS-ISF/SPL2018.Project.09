@@ -5,6 +5,7 @@
         <and abstract="true" mandatory="true" name="Task4">
             <feature name="SegmentTree"/>
             <feature name="FenwickTree"/>
+            <feature name="SparseTable"/>
         </and>
     </struct>
     <constraints/>

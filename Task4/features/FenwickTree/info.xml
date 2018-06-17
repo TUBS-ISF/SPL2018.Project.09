@@ -1,5 +1,5 @@
 <plugin>
 	<interface id="interfaces.IFenwick">
-		<class>SegmentTree</class>
+		<class>FenwickTree</class>
 	</interface>
 </plugin>

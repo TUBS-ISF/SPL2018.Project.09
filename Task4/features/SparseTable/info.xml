@@ -1,0 +1,5 @@
+<plugin>
+	<interface id="interfaces.ISparseTable">
+		<class>SparseTable</class>
+	</interface>
+</plugin>
