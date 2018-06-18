@@ -3,9 +3,20 @@
     <properties/>
     <struct>
         <and abstract="true" mandatory="true" name="Task4">
-            <feature name="SegmentTree"/>
-            <feature name="FenwickTree"/>
-            <feature name="SparseTable"/>
+            <and abstract="true" name="datastructure">
+                <feature name="SparseTable"/>
+                <feature name="FenwickTree"/>
+                <and abstract="true" name="SegmentT">
+                    <feature name="SegmentTree"/>
+                    <feature name="SegmentTreeLazy"/>
+                    <feature name="SegmentTreePersistent"/>
+                </and>
+            </and>
+            <and abstract="true" name="strings">
+                <feature name="KMP"/>
+                <feature name="ZBox"/>
+                <feature name="SuffixArray"/>
+            </and>
         </and>
     </struct>
     <constraints/>

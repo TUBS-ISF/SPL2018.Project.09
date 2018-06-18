@@ -3,7 +3,12 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/FenwickTree.jar"/>
+	<classpathentry kind="lib" path="lib/KMP.jar"/>
 	<classpathentry kind="lib" path="lib/SegmentTree.jar"/>
+	<classpathentry kind="lib" path="lib/SegmentTreeLazy.jar"/>
+	<classpathentry kind="lib" path="lib/SegmentTreePersistent.jar"/>
 	<classpathentry kind="lib" path="lib/SparseTable.jar"/>
+	<classpathentry kind="lib" path="lib/SuffixArray.jar"/>
+	<classpathentry kind="lib" path="lib/ZBox.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
