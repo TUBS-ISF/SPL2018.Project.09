@@ -1,4 +1,4 @@
-import datastructure.SparsaTable;
+
 import java.util.Arrays;
 
 public class SuffixArray implements interfaces.ISuffixArray{
@@ -25,7 +25,7 @@ public class SuffixArray implements interfaces.ISuffixArray{
     }
 
     
-    public init(String s) {
+    public void init(String s) {
         n = s.length();
         suffixrank = new int[30][n];
         T = new Tuple[n];
@@ -74,7 +74,7 @@ public class SuffixArray implements interfaces.ISuffixArray{
     }
 
     public int getPreffix(int i, int j) {
-        SparsaTable t = new SparsaTable(n);
+        SparseTable t = new SparseTable();
         t.init(lcp);
         int l = suffixrank[stp][i], r = suffixrank[stp][j];
         if (l > r) {
@@ -92,4 +92,6 @@ public class SuffixArray implements interfaces.ISuffixArray{
         }
         return ans;
     }
+
+	
 }
