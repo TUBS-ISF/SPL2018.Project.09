@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <feature automatic="selected" name="Task4"/>
+    <feature automatic="selected" name="datastructure"/>
+    <feature automatic="selected" manual="selected" name="SegmentT"/>
+    <feature manual="selected" name="SegmentTreePersistent"/>
+    <feature automatic="selected" manual="selected" name="strings"/>
+    <feature manual="selected" name="KMP"/>
+    <feature manual="selected" name="ZBox"/>
+    <feature manual="selected" name="SuffixArray"/>
+</configuration>
