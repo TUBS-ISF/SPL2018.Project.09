@@ -3,7 +3,6 @@
     <feature automatic="selected" name="Task4"/>
     <feature automatic="selected" name="datastructure"/>
     <feature manual="selected" name="SparseTable"/>
-    <feature manual="selected" name="FenwickTree"/>
     <feature automatic="selected" manual="selected" name="SegmentT"/>
     <feature manual="selected" name="SegmentTree"/>
     <feature manual="selected" name="SegmentTreeLazy"/>
