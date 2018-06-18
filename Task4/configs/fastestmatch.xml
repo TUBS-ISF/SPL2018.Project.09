@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <feature automatic="selected" name="Task4"/>
+    <feature automatic="selected" name="datastructure"/>
+    <feature manual="selected" name="SparseTable"/>
+    <feature automatic="selected" manual="selected" name="strings"/>
+    <feature manual="selected" name="SuffixArray"/>
+</configuration>

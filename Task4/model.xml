@@ -5,7 +5,6 @@
         <and abstract="true" mandatory="true" name="Task4">
             <and abstract="true" name="datastructure">
                 <feature name="SparseTable"/>
-                <feature name="FenwickTree"/>
                 <and abstract="true" name="SegmentT">
                     <feature name="SegmentTree"/>
                     <feature name="SegmentTreeLazy"/>
