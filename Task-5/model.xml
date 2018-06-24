@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+    <properties/>
+    <struct>
+        <and abstract="true" mandatory="true" name="Task4">
+            <and abstract="true" name="datastructure">
+                <feature name="SparseTable"/>
+                <and abstract="true" name="SegmentT">
+                    <feature name="SegmentTree"/>
+                    <feature name="SegmentTreeLazy"/>
+                    <feature name="SegmentTreePersistent"/>
+                </and>
+            </and>
+            <and abstract="true" name="strings">
+                <feature name="KMP"/>
+                <feature name="ZBox"/>
+                <feature name="SuffixArray"/>
+            </and>
+        </and>
+    </struct>
+    <constraints/>
+    <calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+    <comments/>
+    <featureOrder userDefined="false"/>
+</featureModel>
