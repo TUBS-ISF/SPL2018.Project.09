@@ -14,6 +14,7 @@
             <and abstract="true" name="strings">
                 <feature name="KMP"/>
                 <feature name="Trie"/>
+                <feature name="SuffixArray"/>
                 <feature name="ZBox"/>
                 <feature name="Matcher"/>
             </and>
