@@ -2,5 +2,6 @@
 <configuration>
     <feature automatic="selected" name="Task4"/>
     <feature automatic="selected" manual="selected" name="strings"/>
-    <feature manual="selected" name="KMP"/>
+    <feature manual="selected" name="ZBox"/>
+    <feature manual="selected" name="Matcher"/>
 </configuration>

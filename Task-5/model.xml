@@ -14,7 +14,7 @@
             <and abstract="true" name="strings">
                 <feature name="KMP"/>
                 <feature name="ZBox"/>
-                <feature name="SuffixArray"/>
+                <feature name="Matcher"/>
             </and>
         </and>
     </struct>

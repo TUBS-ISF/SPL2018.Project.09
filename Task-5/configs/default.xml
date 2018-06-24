@@ -6,5 +6,4 @@
     <feature manual="selected" name="SegmentTree"/>
     <feature automatic="selected" manual="selected" name="strings"/>
     <feature manual="selected" name="KMP"/>
-    <feature manual="selected" name="SuffixArray"/>
 </configuration>
