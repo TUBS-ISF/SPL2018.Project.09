@@ -16,6 +16,7 @@
                 <feature name="Trie"/>
                 <feature name="SuffixArray"/>
                 <feature name="ZBox"/>
+                <feature name="hash"/>
                 <feature name="Matcher"/>
             </and>
         </and>

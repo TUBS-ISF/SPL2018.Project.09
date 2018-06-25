@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+    <feature automatic="selected" name="Task4"/>
+    <feature automatic="selected" manual="selected" name="strings"/>
+    <feature manual="selected" name="hash"/>
+    <feature manual="selected" name="Matcher"/>
+</configuration>
