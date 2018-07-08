@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration>
-    <feature automatic="selected" name="Task6"/>
+    <feature automatic="selected" name="Task4"/>
+    <feature automatic="selected" manual="selected" name="datastructure"/>
+    <feature manual="selected" name="DoubleLinkedList"/>
+    <feature manual="selected" name="SparseTable"/>
+    <feature automatic="selected" manual="selected" name="SegmentT"/>
+    <feature manual="selected" name="SegmentTree"/>
+    <feature manual="selected" name="SegmentTreeLazy"/>
+    <feature manual="selected" name="SegmentTreePersistent"/>
+    <feature automatic="selected" manual="selected" name="strings"/>
+    <feature manual="selected" name="KMP"/>
+    <feature manual="selected" name="Trie"/>
+    <feature manual="selected" name="SuffixArray"/>
+    <feature manual="selected" name="ZBox"/>
 </configuration>

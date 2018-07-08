@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="SparseTable.aj|DoubleLinkedList.aj|SegmentTreeLazy.aj|Matcher.aj|SegmentT.aj|SegmentTree.aj|SegmentTreePersistent.aj|KMP.aj|strings.aj|SuffixArray.aj|ZBox.aj|datastructure.aj|Trie.aj|hash.aj" kind="src" path="src"/>
+	<classpathentry excluding="Matcher.aj|hash.aj" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.ajdt.core.ASPECTJRT_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
