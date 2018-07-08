@@ -4,6 +4,8 @@
     <feature automatic="selected" name="datastructure"/>
     <feature automatic="selected" name="SegmentT"/>
     <feature manual="selected" name="SegmentTree"/>
+    <feature manual="selected" name="SegmentTreePersistent"/>
     <feature automatic="selected" manual="selected" name="strings"/>
     <feature manual="selected" name="KMP"/>
+    <feature manual="selected" name="Matcher"/>
 </configuration>
