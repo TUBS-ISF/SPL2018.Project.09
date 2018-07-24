@@ -16,6 +16,8 @@ public class SuffixArray {
     public int[] lcp;
     public int n;
     public int stp;
+    public String S;
+    public long hash;
 
     public class Tuple implements Comparable<Tuple> {
 
@@ -35,6 +37,7 @@ public class SuffixArray {
     public SuffixArray(String s, String algo) {
     	this.algo = algo;
         n = s.length();
+        this.S = s;
         suffixrank = new int[30][n];
         T = new Tuple[n];
 
@@ -105,13 +108,10 @@ public class SuffixArray {
     				Integer b = (Integer)t3;
     				return Math.max(a, b);
     			}
-    			
-    			
     		};
     		
     	}else if(this.algo.equals("SparseTable")) {
             SparseTable<Integer> ST = new SparseTable<Integer>(a) {
-
     			@Override
     			public Integer merge(Object a, Object b) {
     				// TODO Auto-generated method stub
@@ -121,7 +121,6 @@ public class SuffixArray {
     			}
             	
     		};
-            
             return ST.get(l + 1, r);
     	}
     	return 0;

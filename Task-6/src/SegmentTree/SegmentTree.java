@@ -4,7 +4,7 @@ public abstract class SegmentTree <TT>{
 	
 
 	public abstract Object merge(Object t2, Object t3);
-
+	public long hash = -1;
 	public int height, maxsize, n;
 	public Object T[];
 	public TT INF;
