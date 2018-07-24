@@ -18,7 +18,7 @@ public aspect SegmentTreea {
 		}
 		if(r < l) {
 			try {
-				throw new Exception("left must be less than r");
+				throw new Exception("left must be less than right");
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

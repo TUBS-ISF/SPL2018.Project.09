@@ -52,4 +52,15 @@ public  class Trie {
 		}
 		return t;
 	}
+	public Node deletep(String s) {
+		return null;
+	}
+	public void print(Node node) {
+		for(Map.Entry<Character, Node> x : node.M.entrySet()) {
+			System.out.println(x.getKey());
+			Node child = x.getValue();
+			if(child != null)
+				print(child);
+		}
+	}
 }
