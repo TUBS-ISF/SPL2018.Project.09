@@ -27,7 +27,6 @@ public  class Trie {
 				t.M.put(s.charAt(i), k);
 				t = k;
 			}else {
-				
 				t = k;
 				t.d++;
 			}
